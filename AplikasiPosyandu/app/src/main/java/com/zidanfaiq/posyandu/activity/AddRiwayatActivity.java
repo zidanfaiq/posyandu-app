@@ -138,9 +138,6 @@ public class AddRiwayatActivity extends AppCompatActivity {
                 else if (Berat.trim().equals("")) {
                     etBerat.setError("Harus Di isi!");
                 }
-                else if (Penyuluhan.trim().equals("")) {
-                    etPenyuluhan.setError("Harus Di isi!");
-                }
                 else {
                     simpanDataPemeriksaan();
                 }

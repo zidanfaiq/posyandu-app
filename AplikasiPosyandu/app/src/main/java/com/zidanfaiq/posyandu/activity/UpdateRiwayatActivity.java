@@ -163,9 +163,6 @@ public class UpdateRiwayatActivity extends AppCompatActivity {
                 }
                 else if (yBerat.trim().equals("")) {
                     etBerat.setError("Harus Di isi!");
-                }
-                else if (yPenyuluhan.trim().equals("")) {
-                    etPenyuluhan.setError("Harus Di isi!");
                 } else {
                     ubahDataPemeriksaan();
                 }
