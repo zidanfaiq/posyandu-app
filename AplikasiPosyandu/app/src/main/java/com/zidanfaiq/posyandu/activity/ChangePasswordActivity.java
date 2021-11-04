@@ -53,6 +53,9 @@ public class ChangePasswordActivity extends AppCompatActivity {
                 if(Password.trim().equals("")) {
                     Toast.makeText(ChangePasswordActivity.this, "Password tidak boleh kosong", Toast.LENGTH_SHORT).show();
                 }
+                else if (Password.length() < 8) {
+                    Toast.makeText(ChangePasswordActivity.this, "Password minimal 8 karakter", Toast.LENGTH_SHORT).show();
+                }
                 else if (!Password.equals(ConfirmPassword)) {
                     Toast.makeText(ChangePasswordActivity.this, "Konfirmasi password tidak cocok", Toast.LENGTH_SHORT).show();
                 }

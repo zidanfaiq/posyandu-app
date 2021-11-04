@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -128,11 +129,18 @@ public class UpdateProfilActivity extends AppCompatActivity {
                 else if (yEmail.trim().equals("")) {
                     etEmail.setError("Email Harus Di isi!");
                 }
+                else if (!isEmailValid(yEmail)) {
+                    etEmail.setError("Format Email Salah!");
+                }
                 else {
                     updateProfil();
                 }
             }
         });
+    }
+
+    boolean isEmailValid(CharSequence Email) {
+        return Patterns.EMAIL_ADDRESS.matcher(Email).matches();
     }
 
     public void updateProfil() {

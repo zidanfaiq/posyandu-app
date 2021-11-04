@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -53,11 +54,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.btnLogin:
                 Email = etEmail.getText().toString();
                 Password = etPassword.getText().toString();
-                if(Email.trim().equals("")) {
+                if (Email.trim().equals("")) {
                     etEmail.setError("Email Harus Di isi!");
                 }
+                else if (!isEmailValid(Email)) {
+                    etEmail.setError("Format Email Salah!");
+                }
                 else if (Password.trim().equals("")) {
-                    etPassword.setError("Password Harus Di isi!");
+                    Toast.makeText(LoginActivity.this, "Password tidak boleh kosong", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     login(Email, Password);
@@ -68,6 +72,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(intent);
                 break;
         }
+    }
+
+    boolean isEmailValid(CharSequence Email) {
+        return Patterns.EMAIL_ADDRESS.matcher(Email).matches();
     }
 
     public void login(String email, String password) {

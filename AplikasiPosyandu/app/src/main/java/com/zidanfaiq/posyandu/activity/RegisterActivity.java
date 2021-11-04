@@ -6,6 +6,7 @@ import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -116,8 +117,14 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 else if (Email.trim().equals("")) {
                     etEmail.setError("Email Harus Di isi!");
                 }
+                else if (!isEmailValid(Email)) {
+                    etEmail.setError("Format Email Salah!");
+                }
                 else if (Password.trim().equals("")) {
-                    etPassword.setError("Password Harus Di isi!");
+                    Toast.makeText(RegisterActivity.this, "Password tidak boleh kosong", Toast.LENGTH_SHORT).show();
+                }
+                else if (Password.length() < 8) {
+                    Toast.makeText(RegisterActivity.this, "Password minimal 8 karakter", Toast.LENGTH_SHORT).show();
                 }
                 else if (!Password.equals(KonfirmasiPassword)) {
                     Toast.makeText(RegisterActivity.this, "Konfirmasi password tidak cocok", Toast.LENGTH_SHORT).show();
@@ -132,6 +139,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 finish();
                 break;
         }
+    }
+
+    boolean isEmailValid(CharSequence Email) {
+        return Patterns.EMAIL_ADDRESS.matcher(Email).matches();
     }
 
     public void register(String nama_ibu, String nik_ibu, String tempat_lahir, String tgl_lahir, String alamat, String posyandu, String telepon, String email, String password) {
