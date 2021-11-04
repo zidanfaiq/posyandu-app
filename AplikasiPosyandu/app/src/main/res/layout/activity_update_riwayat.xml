@@ -131,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Keterangan"
                 android:inputType="textMultiLine"
-                android:lines="4"
+                android:lines="5"
                 android:padding="5dp"
                 android:gravity="start|top"
                 android:layout_marginBottom="16dp"
