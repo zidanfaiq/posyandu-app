@@ -150,7 +150,13 @@ public class AkunFragment extends Fragment {
                 tvEmail.setVisibility(View.VISIBLE);
 
                 rlProfilNama.setBackground(drawable);
-                tvProfil.setText(NamaIbu.toUpperCase().substring(0, 2));
+                tvProfil.setText(NamaIbu);
+                if (tvProfil.length() >= 2) {
+                    tvProfil.setText(NamaIbu.toUpperCase().substring(0, 2));
+                } else {
+                    tvProfil.setText(NamaIbu.toUpperCase().substring(0, 1));
+                }
+
                 tvNamaLengkap.setText(NamaIbu.toUpperCase());
                 tvEmail.setText(Email);
 

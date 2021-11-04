@@ -77,8 +77,7 @@ public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.HolderDa
         holder.tvNameAnak.setText(riwayatData.getNama_anak().toUpperCase());
         if (holder.tvNameAnak.length() >= 2) {
             holder.tvNameAnak.setText(riwayatData.getNama_anak().toUpperCase().substring(0, 2));
-        }
-        else if (holder.tvNameAnak.length() == 1) {
+        } else {
             holder.tvNameAnak.setText(riwayatData.getNama_anak().toUpperCase().substring(0, 1));
         }
         holder.tvRNamaAnak.setText(riwayatData.getNama_anak().toUpperCase());

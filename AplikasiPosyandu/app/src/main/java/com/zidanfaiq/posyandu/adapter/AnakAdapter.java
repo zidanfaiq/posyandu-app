@@ -82,8 +82,7 @@ public class AnakAdapter extends RecyclerView.Adapter<AnakAdapter.HolderData>{
         holder.tvNama.setText(anakData.getNama_anak().toUpperCase());
         if (holder.tvNama.length() >= 2) {
             holder.tvNama.setText(anakData.getNama_anak().toUpperCase().substring(0, 2));
-        }
-        else if (holder.tvNama.length() == 1) {
+        } else {
             holder.tvNama.setText(anakData.getNama_anak().toUpperCase().substring(0, 1));
         }
         holder.tvAnakID.setText(anakData.getId_anak());
