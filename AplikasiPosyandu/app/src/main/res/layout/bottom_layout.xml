@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_bg">
+
+    <RelativeLayout
+        android:id="@+id/Bio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/imgBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_notes_24"
+            android:layout_centerInParent="true"
+            android:layout_alignParentStart="true">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tvBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Biodata Anak"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/imgBio"
+            android:layout_centerInParent="true">
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Riwayat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/imgRiwayat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_history_24"
+            android:layout_centerInParent="true"
+            android:layout_alignParentStart="true">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tvRiwayat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Riwayat Anak"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_toEndOf="@+id/imgRiwayat"
+            android:layout_marginStart="20dp"
+            android:layout_centerInParent="true">
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Hapus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/imgHapus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_delete_outline_24"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tvHapus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hapus Data Anak"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/imgHapus"
+            android:layout_centerInParent="true">
+        </TextView>
+
+    </RelativeLayout>
+
+</LinearLayout>

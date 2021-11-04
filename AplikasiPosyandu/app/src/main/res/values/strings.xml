@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Posyandu</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="Darah">
+        <item>A</item>
+        <item>AB</item>
+        <item>B</item>
+        <item>O</item>
+        <item>-</item>
+    </string-array>
+
+    <string-array name="jenis_kelamin">
+        <item>Laki-Laki</item>
+        <item>Perempuan</item>
+        <item>-</item>
+    </string-array>
+
+    <string-array name="imunisasi">
+        <item>BCG</item>
+        <item>DPT</item>
+        <item>Polio</item>
+        <item>Hepatitis B</item>
+        <item>Campak</item>
+        <item>Tidak</item>
+    </string-array>
+
+    <string-array name="vitamin">
+        <item>Ya</item>
+        <item>Tidak</item>
+    </string-array>
+
+    <string-array name="gizi">
+        <item>Sangat Baik</item>
+        <item>Baik</item>
+        <item>Kurang Baik</item>
+        <item>Tidak Baik</item>
+    </string-array>
+
+</resources>

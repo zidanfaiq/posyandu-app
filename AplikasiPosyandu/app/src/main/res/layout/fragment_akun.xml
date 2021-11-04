@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.AkunFragment">
+
+    <LinearLayout
+        android:id="@+id/Linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#2A93D5"
+        android:padding="40dp">
+
+        <RelativeLayout
+            android:id="@+id/rlProfilNama"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvProfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AZ"
+                android:textSize="42dp"
+                android:textStyle="bold"
+                android:textColor="#2A93D5">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvProfilNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvProfilEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="5dp">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/Linear">
+
+        <RelativeLayout
+            android:id="@+id/rlProfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/imgProfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_outline_profil_24"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="20dp">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tvMenuProfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profil"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/imgProfil"
+                android:textColor="#000000">
+            </TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_round_arrow_forward_ios_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true">
+            </ImageView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="?android:attr/listDivider"
+                android:layout_below="@+id/imgProfil">
+            </View>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/imgPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_outline_lock_24"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="20dp">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tvMenuPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/imgPassword"
+                android:textColor="#000000">
+            </TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_round_arrow_forward_ios_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true">
+            </ImageView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="?android:attr/listDivider"
+                android:layout_below="@+id/imgPassword">
+            </View>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlRiwayat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/imgRiwayat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_round_history_24"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="20dp">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tvMenuRiwayat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Riwayat"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/imgRiwayat"
+                android:textColor="#000000">
+            </TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_round_arrow_forward_ios_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true">
+            </ImageView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="?android:attr/listDivider"
+                android:layout_below="@+id/imgRiwayat">
+            </View>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlTentang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/imgTentang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_error_outline_24"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="20dp">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tvMenuTentang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tentang"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/imgTentang"
+                android:textColor="#000000">
+            </TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_round_arrow_forward_ios_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true">
+            </ImageView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="?android:attr/listDivider"
+                android:layout_below="@+id/imgTentang">
+            </View>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlExit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/imgKeluar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_exit_to_app_24"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="20dp">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tvMenuKeluar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keluar"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/imgKeluar"
+                android:textColor="#000000">
+            </TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_round_arrow_forward_ios_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true">
+            </ImageView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="?android:attr/listDivider"
+                android:layout_below="@+id/imgKeluar">
+            </View>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pbAkun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Linear2"
+        android:visibility="visible"
+        android:indeterminateTint="#FFFFFF"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="80dp">
+    </ProgressBar>
+
+</RelativeLayout>

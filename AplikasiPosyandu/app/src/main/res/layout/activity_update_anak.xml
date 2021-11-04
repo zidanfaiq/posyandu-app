@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    app:cardCornerRadius="6dp"
+    tools:context=".activity.UpdateAnakActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etUpdateNamaAnak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Lengkap Anak"
+                android:textSize="16sp"
+                android:inputType="text">
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etUpdateAnakKe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Anak ke-"
+                android:textSize="16sp"
+                android:inputType="numberDecimal">
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etUpdateAkte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="No Akte Kelahiran"
+                android:textSize="16sp"
+                android:inputType="text">
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etUpdateNIK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="NIK"
+                android:textSize="16sp"
+                android:inputType="numberDecimal">
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp">
+
+                <EditText
+                    android:id="@+id/etUpdateTempatLahir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tempat"
+                    android:textSize="16sp"
+                    android:inputType="text">
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp">
+
+                <EditText
+                    android:id="@+id/etUpdateTglLahir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tanggal Lahir"
+                    android:textSize="16sp"
+                    android:focusable="false">
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis Kelamin"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="10dp">
+        </TextView>
+
+        <Spinner
+            android:id="@+id/spinnerUbahJK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </Spinner>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Golongan Darah"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="10dp">
+        </TextView>
+
+        <Spinner
+            android:id="@+id/spinnerUbahDarah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+        </Spinner>
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2A93D5"
+            android:textColor="#FFFFFF"
+            android:text="Update">
+        </Button>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

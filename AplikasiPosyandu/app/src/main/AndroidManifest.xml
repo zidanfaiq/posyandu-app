@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zidanfaiq.posyandu">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="m">
+        <activity android:name=".activity.AllRiwayatActivity"/>
+        <activity android:name=".activity.ChangePasswordActivity" />
+        <activity android:name=".activity.UpdateProfilActivity" />
+        <activity android:name=".activity.UpdateRiwayatActivity" />
+        <activity android:name=".activity.AddRiwayatActivity" />
+        <activity android:name=".activity.RiwayatActivity" />
+        <activity android:name=".activity.UpdateAnakActivity" />
+        <activity android:name=".activity.AddAnakActivity" />
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:theme="@style/Theme.AppCompat.">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
