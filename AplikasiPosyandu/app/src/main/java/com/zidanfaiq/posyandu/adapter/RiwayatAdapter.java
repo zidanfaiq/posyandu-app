@@ -74,8 +74,13 @@ public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.HolderDa
         drawable.setColor(Color.rgb(red, green, blue));
 
         holder.rlNamaAnak.setBackground(drawable);
-
-        holder.tvNameAnak.setText(riwayatData.getNama_anak().toUpperCase().substring(0, 2));
+        holder.tvNameAnak.setText(riwayatData.getNama_anak().toUpperCase());
+        if (holder.tvNameAnak.length() >= 2) {
+            holder.tvNameAnak.setText(riwayatData.getNama_anak().toUpperCase().substring(0, 2));
+        }
+        else if (holder.tvNameAnak.length() == 1) {
+            holder.tvNameAnak.setText(riwayatData.getNama_anak().toUpperCase().substring(0, 1));
+        }
         holder.tvRNamaAnak.setText(riwayatData.getNama_anak().toUpperCase());
         holder.tvPemeriksaanID.setText(riwayatData.getId_pemeriksaan());
         holder.tvTanggal.setText(riwayatData.getTgl_pemeriksaan());

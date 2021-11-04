@@ -79,16 +79,22 @@ public class AnakAdapter extends RecyclerView.Adapter<AnakAdapter.HolderData>{
         drawable.setColor(Color.rgb(red, green, blue));
 
         holder.rlNama.setBackground(drawable);
-        holder.tvNama.setText(anakData.getNama_anak().toUpperCase().substring(0, 2));
+        holder.tvNama.setText(anakData.getNama_anak().toUpperCase());
+        if (holder.tvNama.length() >= 2) {
+            holder.tvNama.setText(anakData.getNama_anak().toUpperCase().substring(0, 2));
+        }
+        else if (holder.tvNama.length() == 1) {
+            holder.tvNama.setText(anakData.getNama_anak().toUpperCase().substring(0, 1));
+        }
         holder.tvAnakID.setText(anakData.getId_anak());
         holder.tvNamaAnak.setText(anakData.getNama_anak().toUpperCase());
         holder.tvAnakKe.setText(anakData.getAnak_ke());
-        holder.tvAkte.setText(anakData.getNo_akte().toUpperCase());
+        holder.tvAkte.setText(anakData.getNo_akte());
         holder.tvNIKAnak.setText(anakData.getNik_anak());
-        holder.tvTempatLahir.setText(anakData.getTempat_lahir().toUpperCase());
+        holder.tvTempatLahir.setText(anakData.getTempat_lahir());
         holder.tvTglLahir.setText(anakData.getTgl_lahir());
         holder.tvJK.setText(anakData.getJenis_kelamin().toUpperCase());
-        holder.tvDarah.setText(anakData.getGol_darah().toUpperCase());
+        holder.tvDarah.setText(anakData.getGol_darah());
         holder.tvUserID.setText(anakData.getUser_id());
         holder.imgOption.setOnClickListener(new View.OnClickListener() {
             @Override
