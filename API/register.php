@@ -5,15 +5,15 @@ include 'connection.php';
 if($_POST){
 
     //POST DATA
-    $nama_ibu = filter_input(INPUT_POST, 'nama_ibu', FILTER_SANITIZE_STRING);
-    $nik_ibu = filter_input(INPUT_POST, 'nik_ibu', FILTER_SANITIZE_STRING);
-    $tempat_lahir = filter_input(INPUT_POST, 'tempat_lahir', FILTER_SANITIZE_STRING);
-    $tgl_lahir = filter_input(INPUT_POST, 'tgl_lahir', FILTER_SANITIZE_STRING);
-    $alamat = filter_input(INPUT_POST, 'alamat', FILTER_SANITIZE_STRING);
-    $posyandu = filter_input(INPUT_POST, 'posyandu', FILTER_SANITIZE_STRING);
-    $telepon = filter_input(INPUT_POST, 'telepon', FILTER_SANITIZE_STRING);
-    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
-    $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+    $nama_ibu = $_POST['nama_ibu'];
+    $nik_ibu = $_POST['nik_ibu'];
+    $tempat_lahir = $_POST['tempat_lahir'];
+    $tgl_lahir = $_POST['tgl_lahir'];
+    $alamat = $_POST['alamat'];
+    $posyandu = $_POST['posyandu'];
+    $telepon = $_POST['telepon'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
     $response = [];
 
