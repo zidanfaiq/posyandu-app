@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    app:cardCornerRadius="6dp"
+    tools:context=".activity.ChangePasswordActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kategori"
+                android:layout_marginBottom="10dp">
+            </TextView>
+
+            <Spinner
+                android:id="@+id/spinnerKategori"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </Spinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keterangan"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp">
+            </TextView>
+
+            <EditText
+                android:id="@+id/etKeterangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:padding="5dp"
+                android:gravity="start|top"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/txt_bg">
+            </EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Feedback"
+                android:justificationMode="inter_word"
+                android:textSize="12sp"
+                android:layout_marginBottom="10dp">
+            </TextView>
+
+            <Button
+                android:id="@+id/btnKirim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2A93D5"
+                android:textColor="#FFFFFF"
+                android:text="Kirim"
+                android:visibility="gone">
+            </Button>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_below="@id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:layout_marginTop="10dp">
+        </View>
+
+        <RelativeLayout
+            android:id="@+id/rlKirim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:layout_alignParentEnd="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KIRIM"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="#000000">
+            </TextView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

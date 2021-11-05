@@ -154,4 +154,12 @@ public interface ApiInterface {
     Call<LoginResponse> akunResponse(
             @Field("user_id") String user_id
     );
+
+    @FormUrlEncoded
+    @POST("feedback.php")
+    Call<LoginResponse> feedbackResponse(
+            @Field("kategori") String kategori,
+            @Field("pesan") String pesan,
+            @Field("user_id") String user_id
+    );
 }

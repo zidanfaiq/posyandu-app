@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Posyandu</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="Feedback">
+        Pilih kategori feedback dan masukan keterangan pesan yang akan anda berikan. Feedback yang telah anda kirim akan diterima oleh tim kami. Harap tidak menyertakan informasi pribadi dalam feedback anda.
+    </string>
 
     <string-array name="Darah">
         <item>A</item>
@@ -36,6 +38,12 @@
         <item>Baik</item>
         <item>Kurang Baik</item>
         <item>Tidak Baik</item>
+    </string-array>
+
+    <string-array name="kategori">
+        <item>Umum</item>
+        <item>Bug</item>
+        <item>Saran</item>
     </string-array>
 
 </resources>

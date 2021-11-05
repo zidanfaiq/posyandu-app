@@ -21,6 +21,7 @@ import android.widget.TextView;
 import com.zidanfaiq.posyandu.R;
 import com.zidanfaiq.posyandu.activity.AllRiwayatActivity;
 import com.zidanfaiq.posyandu.activity.ChangePasswordActivity;
+import com.zidanfaiq.posyandu.activity.FeedbackActivity;
 import com.zidanfaiq.posyandu.activity.LoginActivity;
 import com.zidanfaiq.posyandu.activity.UpdateProfilActivity;
 import com.zidanfaiq.posyandu.api.ApiClient;
@@ -45,7 +46,7 @@ public class AkunFragment extends Fragment {
     SessionManager sessionManager;
     TextView tvProfil, tvNamaLengkap, tvEmail;
     String UserID, NamaIbu, Email;
-    RelativeLayout rlProfil, rlPassword, rlRiwayat, rlTentang, rlKeluar;
+    RelativeLayout rlProfil, rlPassword, rlRiwayat, rlFeedback, rlKeluar;
     ApiInterface apiInterface;
     ProgressBar pbAkun;
 
@@ -64,7 +65,7 @@ public class AkunFragment extends Fragment {
         rlProfil = getView().findViewById(R.id.rlProfil);
         rlPassword = getView().findViewById(R.id.rlPassword);
         rlRiwayat = getView().findViewById(R.id.rlRiwayat);
-        rlTentang = getView().findViewById(R.id.rlTentang);
+        rlFeedback = getView().findViewById(R.id.rlFeedback);
         rlKeluar = getView().findViewById(R.id.rlExit);
         pbAkun = getView().findViewById(R.id.pbAkun);
 
@@ -89,10 +90,10 @@ public class AkunFragment extends Fragment {
             }
         });
 
-        rlTentang.setOnClickListener(new View.OnClickListener() {
+        rlFeedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(getActivity(), FeedbackActivity.class));
             }
         });
 
