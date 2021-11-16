@@ -14,14 +14,14 @@
             $response['message'] = "Hapus data Berhasil";
         }
         else if($result->rowCount() == 0){
-			$deleteQuery = "DELETE FROM anak WHERE id_anak = '$id_anak'";
+            $deleteQuery = "DELETE FROM anak WHERE id_anak = '$id_anak'";
 			$hasil = $connection->prepare($deleteQuery);
 			$hasil->execute();
             $response['status'] = true;
             $response['message'] = "Hapus data Berhasil";
         } else {
             $response['status'] = false;
-			$response['message'] = "Gagal menghapus data";
+            $response['message'] = "Gagal menghapus data";
         }
     }
     else {
