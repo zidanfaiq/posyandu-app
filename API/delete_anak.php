@@ -15,8 +15,8 @@
         }
         else if($result->rowCount() == 0){
             $deleteQuery = "DELETE FROM anak WHERE id_anak = '$id_anak'";
-			$hasil = $connection->prepare($deleteQuery);
-			$hasil->execute();
+            $hasil = $connection->prepare($deleteQuery);
+            $hasil->execute();
             $response['status'] = true;
             $response['message'] = "Hapus data Berhasil";
         } else {
