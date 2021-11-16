@@ -24,7 +24,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.zidanfaiq.posyandu.R;
-import com.zidanfaiq.posyandu.activity.ChangePasswordActivity;
 import com.zidanfaiq.posyandu.activity.RiwayatActivity;
 import com.zidanfaiq.posyandu.activity.UpdateAnakActivity;
 import com.zidanfaiq.posyandu.api.ApiClient;

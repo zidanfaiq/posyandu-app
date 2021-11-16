@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.zidanfaiq.posyandu.R;
 import com.zidanfaiq.posyandu.adapter.RiwayatAdapter;

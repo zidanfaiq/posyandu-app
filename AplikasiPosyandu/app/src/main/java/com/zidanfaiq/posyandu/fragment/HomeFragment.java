@@ -100,6 +100,7 @@ public class HomeFragment extends Fragment implements AnakAdapter.DataAnak {
     @Override
     public void onResume() {
         pbAnak.setVisibility(View.VISIBLE);
+        tvEmpty.setVisibility(View.GONE);
         rvData.setVisibility(View.GONE);
         getDataAnak();
         super.onResume();
