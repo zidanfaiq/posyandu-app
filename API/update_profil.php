@@ -5,7 +5,7 @@ include 'connection.php';
 if($_POST){
 
     //POST DATA
-	$user_id = $_POST['user_id'];
+    $user_id = $_POST['user_id'];
     $nama_ibu = $_POST['nama_ibu'];
     $nik_ibu = $_POST['nik_ibu'];
     $tempat_lahir = $_POST['tempat_lahir'];
@@ -46,26 +46,26 @@ if($_POST){
         $updateAccount = "UPDATE user SET nama_ibu = '$nama_ibu', nik_ibu = '$nik_ibu', tempat_lahir = '$tempat_lahir', tgl_lahir = '$tgl_lahir', alamat = '$alamat', posyandu = '$posyandu', telepon = '$telepon', email = '$email' WHERE user_id = '$user_id'";
         $statement = $connection->prepare($updateAccount);
         $statement->execute();
-			
-		if ($statement->rowCount()) {
-			//Beri response
-			$response['status']= true;
-			$response['message']='Profil berhasil diubah';
-			$response['data'] = [
-				'user_id' => $user_id,
-				'nama_ibu' => $nama_ibu,
-				'nik_ibu' => $nik_ibu,
-				'tempat_lahir' => $tempat_lahir,
-				'tgl_lahir' => $tgl_lahir,
-				'alamat' => $alamat,
-				'posyandu' => $posyandu,
-				'telepon' => $telepon,
-				'email' => $email
-			];
-		} else {
-			$response['status'] = false;
-			$response['message'] = "Update data gagal";
-		}
+        
+        if ($statement->rowCount()) {
+            //Beri response
+            $response['status']= true;
+            $response['message']='Profil berhasil diubah';
+            $response['data'] = [
+                'user_id' => $user_id,
+                'nama_ibu' => $nama_ibu,
+                'nik_ibu' => $nik_ibu,
+                'tempat_lahir' => $tempat_lahir,
+                'tgl_lahir' => $tgl_lahir,
+                'alamat' => $alamat,
+                'posyandu' => $posyandu,
+                'telepon' => $telepon,
+                'email' => $email
+            ];
+        } else {
+            $response['status'] = false;
+            $response['message'] = "Update data gagal";
+        }
     }
 
 }

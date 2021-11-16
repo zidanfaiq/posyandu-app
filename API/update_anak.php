@@ -18,20 +18,20 @@
         if($userQuery->rowCount() != 0){
             $response['status']= false;
             $response['message']='NIK sudah digunakan';
-        } else {
-			$query = "UPDATE anak SET nama_anak = '$nama_anak', anak_ke = '$anak_ke', no_akte = '$no_akte', nik_anak = '$nik_anak', tempat_lahir = '$tempat_lahir', tgl_lahir = '$tgl_lahir', jenis_kelamin = '$jenis_kelamin', gol_darah = '$gol_darah' WHERE id_anak = '$id_anak'";
+        }
+        else {
+            $query = "UPDATE anak SET nama_anak = '$nama_anak', anak_ke = '$anak_ke', no_akte = '$no_akte', nik_anak = '$nik_anak', tempat_lahir = '$tempat_lahir', tgl_lahir = '$tgl_lahir', jenis_kelamin = '$jenis_kelamin', gol_darah = '$gol_darah' WHERE id_anak = '$id_anak'";
             $result = $connection->prepare($query);
             $result->execute();
-			
-			if ($result->rowCount()) {
-				$response['status'] = true;
-				$response['message'] = "Update data berhasil";
             
-			} else {
-				$response['status'] = false;
-				$response['message'] = "Update data gagal";
-			}
-		}
+            if ($result->rowCount()) {
+                $response['status'] = true;
+                $response['message'] = "Update data berhasil";
+            } else {
+                $response['status'] = false;
+                $response['message'] = "Update data gagal";
+            }
+        }
     }
     else {
         $response['status'] = false;
