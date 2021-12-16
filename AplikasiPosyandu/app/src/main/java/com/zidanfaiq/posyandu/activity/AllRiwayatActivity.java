@@ -8,6 +8,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -28,7 +29,8 @@ import retrofit2.Response;
 
 public class AllRiwayatActivity extends AppCompatActivity {
 
-    TextView tvNull;
+    TextView tvNull, tvNull2;
+    ImageView ivNull;
     RecyclerView rvData;
     RecyclerView.Adapter riwayatAdapter;
     RecyclerView.LayoutManager lmData;
@@ -58,6 +60,8 @@ public class AllRiwayatActivity extends AppCompatActivity {
         srlAllRiwayat = findViewById(R.id.srlAllRiwayat);
         pbAllRiwayat = findViewById(R.id.pbAllRiwayat);
         tvNull = findViewById(R.id.tvNull);
+        tvNull2 = findViewById(R.id.tvNull2);
+        ivNull = findViewById(R.id.ivNull);
 
         srlAllRiwayat.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -74,6 +78,8 @@ public class AllRiwayatActivity extends AppCompatActivity {
         super.onResume();
         pbAllRiwayat.setVisibility(View.VISIBLE);
         tvNull.setVisibility(View.GONE);
+        tvNull2.setVisibility(View.GONE);
+        ivNull.setVisibility(View.GONE);
         rvData.setVisibility(View.GONE);
         getDataPemeriksaan();
     }
@@ -91,14 +97,18 @@ public class AllRiwayatActivity extends AppCompatActivity {
                 rvData.setLayoutManager(lmData);
                 riwayatAdapter.notifyDataSetChanged();
 
-                tvNull.setText("Belum ada riwayat anak");
+                tvNull.setText("Riwayat Anak Masih Kosong");
                 if (listRiwayat == null) {
                     rvData.setVisibility(View.GONE);
                     tvNull.setVisibility(View.VISIBLE);
+                    tvNull2.setVisibility(View.VISIBLE);
+                    ivNull.setVisibility(View.VISIBLE);
                 }
                 else {
                     rvData.setVisibility(View.VISIBLE);
                     tvNull.setVisibility(View.GONE);
+                    tvNull2.setVisibility(View.GONE);
+                    ivNull.setVisibility(View.GONE);
                 }
 
                 pbAllRiwayat.setVisibility(View.INVISIBLE);
@@ -110,6 +120,8 @@ public class AllRiwayatActivity extends AppCompatActivity {
                 tvNull.setText("Gagal memuat riwayat anak");
                 rvData.setVisibility(View.GONE);
                 tvNull.setVisibility(View.VISIBLE);
+                tvNull2.setVisibility(View.GONE);
+                ivNull.setVisibility(View.GONE);
                 pbAllRiwayat.setVisibility(View.INVISIBLE);
             }
         });

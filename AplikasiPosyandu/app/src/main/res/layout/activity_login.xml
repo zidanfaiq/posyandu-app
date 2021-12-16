@@ -9,16 +9,13 @@
     android:gravity="center"
     tools:context=".activity.LoginActivity">
 
-    <TextView
-        android:layout_width="match_parent"
+    <ImageView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="80dp"
         android:gravity="center"
-        android:text="Login"
-        android:textColor="#2A93D5"
-        android:textStyle="bold"
-        android:textSize="28sp">
-    </TextView>
+        android:src="@drawable/ic_logo_posyandu">
+    </ImageView>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"

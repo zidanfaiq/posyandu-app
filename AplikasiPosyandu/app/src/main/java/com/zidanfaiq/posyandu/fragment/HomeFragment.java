@@ -14,6 +14,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -43,7 +44,8 @@ public class HomeFragment extends Fragment implements AnakAdapter.DataAnak {
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
 
-    TextView tvNamaLengkap, tvPosyandu, tvAlamat, tvEmpty;
+    TextView tvNamaLengkap, tvPosyandu, tvAlamat, tvEmpty, tvEmpty2;
+    ImageView ivEmpty;
     RecyclerView rvData;
     RecyclerView.Adapter anakAdapter;
     RecyclerView.LayoutManager lmData;
@@ -74,6 +76,8 @@ public class HomeFragment extends Fragment implements AnakAdapter.DataAnak {
         srlAnak = getView().findViewById(R.id.srlAnak);
         pbAnak = getView().findViewById(R.id.pbAnak);
         tvEmpty = getView().findViewById(R.id.tvEmpty);
+        tvEmpty2 = getView().findViewById(R.id.tvEmpty2);
+        ivEmpty = getView().findViewById(R.id.ivEmpty);
 
         srlAnak.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -100,7 +104,9 @@ public class HomeFragment extends Fragment implements AnakAdapter.DataAnak {
     @Override
     public void onResume() {
         pbAnak.setVisibility(View.VISIBLE);
+        ivEmpty.setVisibility(View.GONE);
         tvEmpty.setVisibility(View.GONE);
+        tvEmpty2.setVisibility(View.GONE);
         rvData.setVisibility(View.GONE);
         getDataAnak();
         super.onResume();
@@ -127,14 +133,18 @@ public class HomeFragment extends Fragment implements AnakAdapter.DataAnak {
                 rvData.setLayoutManager(lmData);
                 anakAdapter.notifyDataSetChanged();
 
-                tvEmpty.setText("Belum ada data anak");
+                tvEmpty.setText("Data Anak Masih Kosong");
                 if (listAnak == null) {
                     rvData.setVisibility(View.GONE);
+                    ivEmpty.setVisibility(View.VISIBLE);
                     tvEmpty.setVisibility(View.VISIBLE);
+                    tvEmpty2.setVisibility(View.VISIBLE);
                 }
                 else {
                     rvData.setVisibility(View.VISIBLE);
+                    ivEmpty.setVisibility(View.GONE);
                     tvEmpty.setVisibility(View.GONE);
+                    tvEmpty2.setVisibility(View.GONE);
                 }
 
                 pbAnak.setVisibility(View.INVISIBLE);
@@ -146,6 +156,8 @@ public class HomeFragment extends Fragment implements AnakAdapter.DataAnak {
                 tvEmpty.setText("Gagal memuat data anak");
                 rvData.setVisibility(View.GONE);
                 tvEmpty.setVisibility(View.VISIBLE);
+                ivEmpty.setVisibility(View.GONE);
+                tvEmpty2.setVisibility(View.GONE);
                 pbAnak.setVisibility(View.INVISIBLE);
             }
         });

@@ -64,14 +64,9 @@ public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.HolderDa
 
         RiwayatData riwayatData = listRiwayat.get(position);
 
-        Random r = new Random();
-        int red = r.nextInt(255 + 1);
-        int green = r.nextInt(255 + 1);
-        int blue = r.nextInt(255 + 1);
-
         GradientDrawable drawable = new GradientDrawable();
         drawable.setShape(GradientDrawable.OVAL);
-        drawable.setColor(Color.rgb(red, green, blue));
+        drawable.setColor(Color.parseColor("#3DDAD7"));
 
         holder.rlNamaAnak.setBackground(drawable);
         holder.tvNameAnak.setText(riwayatData.getNama_anak().toUpperCase());

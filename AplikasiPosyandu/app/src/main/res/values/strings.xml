@@ -5,6 +5,14 @@
         Pilih kategori feedback dan masukan keterangan pesan yang akan anda berikan. Feedback yang telah anda kirim akan diterima oleh tim kami. Harap tidak menyertakan informasi pribadi dalam feedback anda.
     </string>
 
+    <string name="Empty">
+        Semua data anak akan tersimpan di sini. Tambahkan data anak untuk membuat laporan anak pada posyandu.
+    </string>
+
+    <string name="Kosong">
+        Semua riwayat anak akan tersimpan di sini ketika data riwayat anak sudah ditambahkan.
+    </string>
+
     <string-array name="Darah">
         <item>A</item>
         <item>AB</item>

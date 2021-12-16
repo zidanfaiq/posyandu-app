@@ -68,14 +68,9 @@ public class AnakAdapter extends RecyclerView.Adapter<AnakAdapter.HolderData>{
     public void onBindViewHolder(@NonNull HolderData holder, int position) {
         AnakData anakData = listAnak.get(position);
 
-        Random r = new Random();
-        int red = r.nextInt(255 + 1);
-        int green = r.nextInt(255 + 1);
-        int blue = r.nextInt(255 + 1);
-
         GradientDrawable drawable = new GradientDrawable();
         drawable.setShape(GradientDrawable.OVAL);
-        drawable.setColor(Color.rgb(red, green, blue));
+        drawable.setColor(Color.parseColor("#3DDAD7"));
 
         holder.rlNama.setBackground(drawable);
         holder.tvNama.setText(anakData.getNama_anak().toUpperCase());

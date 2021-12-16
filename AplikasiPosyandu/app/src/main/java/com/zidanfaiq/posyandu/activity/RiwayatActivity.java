@@ -9,6 +9,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -39,7 +40,8 @@ public class RiwayatActivity extends AppCompatActivity {
     SwipeRefreshLayout srlRiwayat;
     ProgressBar pbRiwayat;
     String AnakID;
-    TextView tvKosong;
+    TextView tvKosong, tvKosong2;
+    ImageView ivKosong;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +62,8 @@ public class RiwayatActivity extends AppCompatActivity {
         pbRiwayat = findViewById(R.id.pbRiwayat);
         fabAddRiwayat = findViewById(R.id.fabAddRiwayat);
         tvKosong = findViewById(R.id.tvKosong);
+        tvKosong2 = findViewById(R.id.tvKosong2);
+        ivKosong = findViewById(R.id.ivKosong);
 
         srlRiwayat.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -85,6 +89,8 @@ public class RiwayatActivity extends AppCompatActivity {
         super.onResume();
         pbRiwayat.setVisibility(View.VISIBLE);
         tvKosong.setVisibility(View.GONE);
+        tvKosong2.setVisibility(View.GONE);
+        ivKosong.setVisibility(View.GONE);
         rvData.setVisibility(View.GONE);
         getDataPemeriksaan();
     }
@@ -103,14 +109,18 @@ public class RiwayatActivity extends AppCompatActivity {
                 rvData.setLayoutManager(lmData);
                 riwayatAdapter.notifyDataSetChanged();
 
-                tvKosong.setText("Belum ada riwayat anak");
+                tvKosong.setText("Riwayat Anak Masih Kosong");
                 if (listRiwayat == null) {
                     rvData.setVisibility(View.GONE);
                     tvKosong.setVisibility(View.VISIBLE);
+                    tvKosong2.setVisibility(View.VISIBLE);
+                    ivKosong.setVisibility(View.VISIBLE);
                 }
                 else {
                     rvData.setVisibility(View.VISIBLE);
                     tvKosong.setVisibility(View.GONE);
+                    tvKosong2.setVisibility(View.GONE);
+                    ivKosong.setVisibility(View.GONE);
                 }
 
                 pbRiwayat.setVisibility(View.INVISIBLE);
@@ -122,6 +132,8 @@ public class RiwayatActivity extends AppCompatActivity {
                 tvKosong.setText("Gagal memuat riwayat anak");
                 rvData.setVisibility(View.GONE);
                 tvKosong.setVisibility(View.VISIBLE);
+                tvKosong2.setVisibility(View.GONE);
+                ivKosong.setVisibility(View.GONE);
                 pbRiwayat.setVisibility(View.INVISIBLE);
             }
         });

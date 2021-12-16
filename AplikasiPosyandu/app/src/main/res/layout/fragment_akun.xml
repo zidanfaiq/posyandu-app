@@ -205,53 +205,6 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/rlFeedback"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="40dp"
-            android:foreground="?android:attr/selectableItemBackground">
-
-            <ImageView
-                android:id="@+id/imgFeedback"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_outline_feedback_24"
-                android:layout_alignParentStart="true"
-                android:layout_centerInParent="true"
-                android:layout_marginEnd="20dp">
-            </ImageView>
-
-            <TextView
-                android:id="@+id/tvMenuTentang"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Feedback"
-                android:layout_centerInParent="true"
-                android:layout_toEndOf="@+id/imgFeedback"
-                android:textColor="#000000">
-            </TextView>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_round_arrow_forward_ios_24"
-                android:layout_alignParentEnd="true"
-                android:layout_centerInParent="true">
-            </ImageView>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="20dp"
-                android:background="?android:attr/listDivider"
-                android:layout_below="@+id/imgFeedback">
-            </View>
-
-        </RelativeLayout>
-
-        <RelativeLayout
             android:id="@+id/rlExit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
